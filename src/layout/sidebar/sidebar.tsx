@@ -33,6 +33,7 @@ const Sidebar: FC<SidebarProps> = ({ menu, OnToggleMenu }) => {
       pos={"absolute"}
       top={0}
       bottom={0}
+      zIndex={1002}
       left={{ base: menu ? 0 : "-100%", lg: 0 }}
       display={{ md: "none" }}
       bg={colorMode}

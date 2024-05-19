@@ -27,12 +27,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <NotificationBar OnToggle={OnToggle} toggle={toggle} />
       <Header toggle={toggle} OnToggleMenu={OnToggleMenu} />
       <Sidebar OnToggleMenu={OnToggleMenu} menu={menu} />
-      <Box>
-        <Container minH={toggle ? "52.3vh" : "45.5vh"} maxW={"7xl"} mt={"8vh"} mb={2}>
-          {children}
-        </Container>
+      <Box minH={toggle ? "52.3vh" : "45.5vh"}  mt={"8vh"} >
+        {children}
       </Box>
-      <Footer />
+      <Footer/>
     </Box>
   );
 };

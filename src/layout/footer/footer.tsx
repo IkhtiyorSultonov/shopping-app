@@ -7,9 +7,9 @@ const Footer = () => {
   const router = useRouter();
   return (
     <Box
-      h={{ base: "auto", md: "25vh", lg: "200px" }}
+      h={{ base: "auto", md: "35vh", lg: "200px" }}
       bg={"gray.900"}
-      p={{ base: 5, md: 0 }}
+      p={{ base: 5, md: 0}}
     >
       <Container
         maxW={{ md: "4xl", lg: "7xl" }}

@@ -1,5 +1,65 @@
 *{
   margin: 0;
   padding: 0;
+}
+.alice-carousel__dots{
+  margin-top: -40px!important;
+  margin-left: 45%!important;
+  position: absolute;
+}
+.lice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active{
+  width: 30px!important;
+  border-radius: 50px!important;
+  transition: all 0.5s ease!important;
+  background-color: #fff!important;
+}
 
+.alice-carousel__prev-btn{
+  position: absolute;
+  margin-top: -180px;
+  left: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px!important;
+  cursor: pointer;
+  background-color: #fff;
+}
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item {
+  position: absolute; 
+  margin-left: -30px!important;
+  margin-top: -7px!important;
+  font-size: 25px;
+}
+
+.alice-carousel__next-btn {
+  position: absolute;
+  margin-top: -180px;
+  left: 92%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px!important;
+  cursor: pointer;
+  background-color: #fff;
+}
+.alice-carousel__next-btn-item {
+  position: absolute; 
+  margin-left: 10px!important;
+  margin-top: -7px!important;
+  font-size: 25px;
+}
+
+
+
+
+@media only screen and (max-width:730.99px) {
+  .alice-carousel__next-btn{
+   left: 90%!important;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .alice-carousel__prev-btn, .alice-carousel__next-btn {
+   display: none!important;
+  }
+  
 }

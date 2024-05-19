@@ -1,0 +1,10 @@
+export { default as SliderSection } from "./slider/slider-section";
+export { default as RoomComponents } from "./room-components/room-components";
+export { default as PopularRoomFurnishings } from "./popular-room-furnishings/popular-room-furnishings";
+export { default as ShopButton } from "./shop-button/shop-button";
+export { default as TextField } from "./text-field/text-field";
+export { default as ConvenienceOfTheCompany } from "./convenience-company/convenience-company";
+export { default as News } from "./news/news";
+export { default as Articles } from "./articles/articles";
+export { default as NewsLetter } from "./newsletter/newsletter";
+export { default as InputField } from "./input-field/input-field";

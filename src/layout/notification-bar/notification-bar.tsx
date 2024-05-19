@@ -21,6 +21,7 @@ const NotificationBar: FC<NotificationBarProps> = ({ OnToggle, toggle }) => {
             pos={'fixed'}
             h={'40px'}
             w={'100%'}
+            zIndex={1001}
             top={toggle ? '-100%' : '0'}
             transition={"all 1s ease"}
             display={'flex'}

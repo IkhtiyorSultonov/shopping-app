@@ -20,6 +20,7 @@ const InputField = ({
   border,
   variant,
   leftIco,
+  pl,
   ...props
 }: InputFieldProps & FieldHookConfig<string>): JSX.Element => {
   const [field, meta] = useField(props);
@@ -27,7 +28,7 @@ const InputField = ({
    
       <FormControl isRequired isInvalid={!!meta.touched && !!meta.error}>
         <InputGroup>
-        <InputLeftElement mt={2}>
+        <InputLeftElement mt={{base:5,sm:7}}>
               {leftIco}
           </InputLeftElement>
           <Input
@@ -36,7 +37,7 @@ const InputField = ({
             placeholder={placeholder}
             borderRadius={'2px'}
             h={14}
-            pl={2}
+            pl={pl}
             mt={{base:3,sm:5}}
             fontSize={{base:'16px',sm:'20px'}}
             fontFamily={'sans-serif'}

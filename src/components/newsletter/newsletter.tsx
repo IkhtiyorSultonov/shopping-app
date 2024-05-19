@@ -24,13 +24,13 @@ const NewsLetter = () => {
             <Box w={{ base: '100%', sm: '90%', md: '60%', lg: '40%' }} h={"200px"}>
                 <Text
                     fontFamily={"sans-serif"}
-                    fontSize={{ base: '30px', md: "40px" }}
+                    fontSize={{ base: '25px', md: "40px" }}
                     textAlign={"center"}
                     lineHeight={"35px"}
                 >
                     Join Our Newsletter
                 </Text>
-                <Text textAlign={"center"} fontSize={{ base: '15px', sm: '16px', md: "20px" }} >
+                <Text textAlign={"center"} fontSize={{ base: '10px', sm: '16px', md: "20px" }} >
                     Sign up for deals, new products and promotions
                 </Text>
                 <Box>
@@ -38,12 +38,13 @@ const NewsLetter = () => {
                         <Form>
                             <InputField
                                 variant="flushed"
+                                pl={10}
                                 label="Email"
                                 name="email"
                                 placeholder="Email addres"
                                 leftIco={<CiMail size={30} />}
                                 children={
-                                    <InputRightElement mt={2} mr={5}>
+                                    <InputRightElement pt={{base:"40px",sm:'50px'}} mr={5}>
                                         <Button variant={"link"} type="submit">
                                             Sign Up
                                         </Button>

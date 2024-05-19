@@ -37,10 +37,9 @@ const NewsLetter = () => {
                     <Formik initialValues={{}} onSubmit={onSubmit}>
                         <Form>
                             <InputField
-                                border="none"
+                                variant="flushed"
                                 label="Email"
                                 name="email"
-                                borderBottom="1px solid #000"
                                 placeholder="Email addres"
                                 leftIco={<CiMail size={30} />}
                                 children={

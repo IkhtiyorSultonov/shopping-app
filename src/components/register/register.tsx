@@ -1,28 +1,25 @@
-import InputField from "../input-field/input-field";
-import React, { FC } from "react";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { Form, Formik, FormikValues } from "formik";
-import { LoginProps } from "./login.props";
-import { useRouter } from "next/router";
-import Cookies from "js-cookie";
 import {
   Box,
   Button,
   Checkbox,
   HStack,
   Icon,
-  IconButton,
   InputRightElement,
   Text,
 } from "@chakra-ui/react";
-
-const login: FC<LoginProps> = ({ onNavigateStateComponent }) => {
+import { Form, Formik, FormikValues } from "formik";
+import React, { FC } from "react";
+import InputField from "../input-field/input-field";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { RegisterProps } from "./register.props";
+import Cookies from "js-cookie"
+import { useRouter } from "next/router";
+const register: FC<RegisterProps> = ({ onNavigateStateComponent }) => {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
-  const router = useRouter();
+  const router = useRouter()
   const onSubmit = (formdata: FormikValues) => {
     Cookies.set("email", formdata.email);
-
     router.push("/");
   };
   return (
@@ -36,15 +33,15 @@ const login: FC<LoginProps> = ({ onNavigateStateComponent }) => {
         Sign In
       </Text>
       <Text fontSize={{ base: "16px", sm: "20px" }} color={"#6C7275"}>
-        Don’t have an accout yet?{" "}
+        Already have an account?{" "}
         <Button
           variant={"link"}
           fontFamily={"sans-serif"}
           fontSize={{ base: "16px", sm: "20px" }}
           colorScheme="teal"
-          onClick={() => onNavigateStateComponent("register")}
+          onClick={() => onNavigateStateComponent('login')}
         >
-          Sign Up
+          Sign in
         </Button>
       </Text>
       <Box>
@@ -52,13 +49,25 @@ const login: FC<LoginProps> = ({ onNavigateStateComponent }) => {
           <Form>
             <InputField
               variant="flushed"
-              label="Uresname or Email"
-              name="email"
-              placeholder="Your usernam or email address"
+              label="Your name"
+              name="name"
+              placeholder="Your name"
             />
             <InputField
               variant="flushed"
-              label="Uresname or Email"
+              label="Username"
+              name="username"
+              placeholder="Username"
+            />
+            <InputField
+              variant="flushed"
+              label="Email"
+              name="email"
+              placeholder=" Email address"
+            />
+            <InputField
+              variant="flushed"
+              label="Password"
               type={show ? "text" : "password"}
               name="password"
               placeholder="Password"
@@ -79,24 +88,14 @@ const login: FC<LoginProps> = ({ onNavigateStateComponent }) => {
                 <Checkbox
                   checked={false}
                   color={"#6C7275"}
-                  size={{ base: "md", md: "lg" }}
+                  size={{ base: "sm", md: "lg" }}
                   fontFamily={"sans-serif"}
                 >
-                  Remember me
+                  I agree with <text style={{ fontWeight: 'bold' }}>Privacy Policy</text>{" "}
+                  and <text style={{ fontWeight: 'bold' }}>Terms of Use</text>
                 </Checkbox>
               </Box>
-              <Box>
-                <Button
-                  variant={"link"}
-                  fontFamily={"sans-serif"}
-                  fontSize={{ base: "14px", sm: "16px" }}
-                  fontWeight={"bold"}
-                  borderRadius={0}
-                  _hover={{ color: "black", borderBottom: "1px solid" }}
-                >
-                  Forgot password?
-                </Button>
-              </Box>
+              <Box></Box>
             </HStack>
             <Button
               color={"#fff"}
@@ -109,7 +108,7 @@ const login: FC<LoginProps> = ({ onNavigateStateComponent }) => {
               fontFamily={"sans-serif"}
               type="submit"
             >
-              Sign In
+              Sign Up
             </Button>
           </Form>
         </Formik>
@@ -118,4 +117,4 @@ const login: FC<LoginProps> = ({ onNavigateStateComponent }) => {
   );
 };
 
-export default login;
+export default register

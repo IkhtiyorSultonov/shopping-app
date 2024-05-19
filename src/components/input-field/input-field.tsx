@@ -18,6 +18,7 @@ const InputField = ({
   disabled,
   borderBottom,
   border,
+  variant,
   leftIco,
   ...props
 }: InputFieldProps & FieldHookConfig<string>): JSX.Element => {
@@ -25,21 +26,22 @@ const InputField = ({
   return (
    
       <FormControl isRequired isInvalid={!!meta.touched && !!meta.error}>
-        <FormLabel mt={15}>{label}</FormLabel>
         <InputGroup>
         <InputLeftElement mt={2}>
               {leftIco}
           </InputLeftElement>
           <Input
+            variant={variant}
             focusBorderColor="facebook.500"
             placeholder={placeholder}
-            borderRadius={'0'}
-            border={border}
-            borderBottom={borderBottom}
+            borderRadius={'2px'}
             h={14}
+            pl={2}
+            mt={{base:3,sm:5}}
+            fontSize={{base:'16px',sm:'20px'}}
+            fontFamily={'sans-serif'}
             type={type}
             disabled={disabled}
-           
             {...field}
           />
           {children}

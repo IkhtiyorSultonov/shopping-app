@@ -9,4 +9,5 @@ export interface InputFieldProps extends InputProps{
     borderBottom?:string;
     border?:string;
     leftIco?:ReactNode;
+    variant?:string
 }

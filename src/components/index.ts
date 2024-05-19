@@ -8,3 +8,5 @@ export { default as News } from "./news/news";
 export { default as Articles } from "./articles/articles";
 export { default as NewsLetter } from "./newsletter/newsletter";
 export { default as InputField } from "./input-field/input-field";
+export { default as Login } from "./login/login";
+export { default as Register } from "./register/register";
